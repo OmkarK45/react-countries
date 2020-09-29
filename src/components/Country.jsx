@@ -1,7 +1,7 @@
 import React from "react";
 
-const Country = (props) => {
-  return <h1>Im a country</h1>;
+const Country = ({data}) => {
+  return <p>{data.name}</p>;
 };
 
 export default Country;
