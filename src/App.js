@@ -1,10 +1,18 @@
-import React  from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Country from "./components/Country";
+import Countries from "./components/Countries";
 const App = () => {
-
   return (
     <React.Fragment>
-      <h1>Rest Countries</h1>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/all" exact component={Countries} />
+          <Route path="/all/:country" exact component={Country} />
+        </Switch>
+      </Router>
     </React.Fragment>
   );
 };
