@@ -3,6 +3,7 @@ import { getCountries } from "./../services/CountryService";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Country from './Country';
+import {Link} from 'react-router-dom'
 
 const Coutries = (props) => {
 
@@ -37,7 +38,11 @@ const Coutries = (props) => {
         <div>
           {data.map((country) => (
             // <li key={country.alpha2Code}>{country.name}</li>
-            <Country data={country}/>
+            <Link key={country.alpha2Code} to={{
+              pathname: `all/${country.name}`,
+              state: {country}
+            }}>{country.name}</Link>
+            // <Country data={country}/>
           ))}
         </div>
       )}
