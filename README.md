@@ -17,3 +17,8 @@
 [] - Write fetch service for fetching data from API and configure .env
 [] - Handle Events. 
 [] - Finishing touches
+
+# Design Specs :
+[] - Default Font - Quicksand
+[] - Default Icon Provider - FontAwesome
+[] - Default Images Provider - Rest API Data
