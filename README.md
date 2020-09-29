@@ -9,7 +9,8 @@
 - React CRA, React hooks, AXIOS
 
 # Todos for the project
-[] - Design in figma
+[x] - Design in figma
+[] - Home, Countries, Country Component
 [] - Navigation bar
 [] - Countries Page
 [] - Country Page
@@ -22,3 +23,4 @@
 [] - Default Font - Quicksand
 [] - Default Icon Provider - FontAwesome
 [] - Default Images Provider - Rest API Data
+
