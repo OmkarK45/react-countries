@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 :root {
-  --mainFont: "Quicksand", sans-serif;
+  --mainFont: "Segoe UI","Quicksand",sans-serif;
   font-family: var(--mainFont);
   --secondFont: "Herr Von Muellerhoff", cursive;
   --thirdFont: "Poppins", sans-serif;
@@ -56,7 +56,6 @@ li {
 }
 a {
   text-decoration: none;
-  font-weight: 700;
 }
 // Header styles
 header {
@@ -217,16 +216,28 @@ nav > ul {
   -moz-box-shadow: 0px 10px 137px -67px rgba(199, 199, 199, 1);
   box-shadow: 0px 10px 137px -67px rgb(143, 143, 143);
   overflow: hidden;
+  img{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 .main{
   padding: 1rem 1.8rem;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+
+  flex-direction: column;
 }
 .name {
   font-size: 1.7rem;
   display: block;
   // padding: 0 1.8rem;
   // padding-top: 1.3rem;
+  font-weight: bold;
   // font-family: var(--thirdFont);
+  font-family: 'Quicksand', sans-serif;
+
 }
 .capital {
   // padding: 0 1.8rem;
@@ -235,14 +246,22 @@ nav > ul {
   color: #4e4b66;
   font-family: "Segoe UI",var(--thirdFont);
 }
-.region{
+.region,.currency{
   padding: 0.3rem 0.5rem;
   background: #DED3FF;
   border-radius: 39px;
   font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  justify-self: flex-end;
 }
 .allCountries-title{
   margin: 2rem 3rem;
   font-family: "Segoe UI";
   font-weight: bold;
+}
+.tag-wrapper{
+  display: flex;
+  flex-wrap: wrap;
 }
