@@ -4,20 +4,6 @@ import { Link } from "react-router-dom";
 const Nav = (props) => {
   return (
     <React.Fragment>
-      {/* <Link to="/" className='p-5'>Home</Link>
-            <Link to="/all" className='p-5'>All</Link>
-            <Link to="/all/:country" className='p-5'>Country</Link> */}
-      {/* <header>
-                <nav>
-                    <ul>
-                        <li className='logo'><Link to="/" className='p-5'>Country Database</Link></li>
-                        <li><Link to="/all" className='p-5'><button className='btn btn-nav'>SHOW ALL</button></Link></li>
-                    </ul>
-                    <div className='search-container'>
-                        <input type="text" name="search" id="search" placeholder='Search...' className='bg-gray-200 focus:bg-white border-transparent focus:border-blue-400'/>
-                    </div>
-                </nav>
-            </header> */}
       <nav class="nav flex flex-wrap items-center justify-between px-4">
         <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
           <span class="font-semibold text-xl tracking-tight">

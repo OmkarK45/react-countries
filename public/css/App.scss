@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +8,7 @@
 :root {
   --mainFont: "Quicksand", sans-serif;
   font-family: var(--mainFont);
+  --secondFont:'Herr Von Muellerhoff', cursive;
 }
 li {
   list-style: none;
@@ -25,6 +26,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   // background-color: orange;
+  border-bottom: 1px solid #ECEDEF;
   flex-wrap: wrap;
 }
 nav > ul {
@@ -110,5 +112,31 @@ nav > ul {
   .menu-btn:checked ~ .menu-icon .navicon::before,
   .menu-btn:checked ~ .menu-icon .navicon::after {
     top: 0;
+  }
+}
+
+// Home page
+.home-wrapper{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 4.6rem);
+  flex-wrap: wrap;
+  grid-template-areas: 'left right';
+}
+.left{
+  grid-area: left;
+  background-color: lightblue;
+}
+.right{
+  background-color: lightgreen;
+  grid-area: right;
+}
+@media (max-width:768px){
+  .home-wrapper{
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 'left' 'right';
+
   }
 }

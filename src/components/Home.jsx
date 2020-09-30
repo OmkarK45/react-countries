@@ -1,7 +1,18 @@
 import React from "react";
 
 const Home = (props) => {
-  return <h1>Im Home</h1>;
+  return (
+    <React.Fragment>
+      <div className='home-wrapper'>
+        <div className="left">
+          test
+        </div>
+        <div className="right">
+          test
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default Home;
