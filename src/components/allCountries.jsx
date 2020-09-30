@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { getCountries } from "./../services/CountryService";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Country from "./Country";
-import { Link } from "react-router-dom";
 import Card from "./Card";
 
 const Coutries = (props) => {
   const [data, setData] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e) => {
+    console.log(e.target.value);
+    setSearchQuery(e.target.value);
+  };
 
   useEffect(() => {
     fetchData();
@@ -19,20 +22,28 @@ const Coutries = (props) => {
       .json()
       .then((res) => {
         setData(res);
-        console.log(res);
-        console.log(data);
       })
       .catch((err) => toast("Some Error Occured"));
   }
 
+const results = !searchQuery ? data : data.filter(d=>d.name.toLowerCase()===searchQuery.toLowerCase())
   return (
     <React.Fragment>
       <div>
-        <h1 className='allCountries-title'>List of all countries</h1>
+        <h1 className="allCountries-title">List of all countries</h1>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          value={searchQuery}
+          onChange={handleSearch}
+          placeholder="Search..."
+          className="bg-gray-200 focus:bg-white border-transparent focus:border-blue-400"
+        />
       </div>
-      <div className='list-wrapper'>
-        {data &&
-          data.map((country) => (
+      <div className="list-wrapper">
+        {results &&
+          results.map((country) => (
             <Card key={country.alpha2Code} country={country} />
           ))}
       </div>
