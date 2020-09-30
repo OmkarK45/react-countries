@@ -1,9 +1,11 @@
 import React from "react";
 import img from '../img.png'
 import { Link } from "react-router-dom";
+import Nav from './Nav'
 const Home = (props) => {
   return (
     <React.Fragment>
+      <Nav/>
       <div className="home-wrapper">
         <div className="left">
           <div className="text-holder">

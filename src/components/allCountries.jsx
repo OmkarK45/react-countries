@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Card from "./Card";
-
+import Nav from './Nav'
 const Coutries = (props) => {
   const [data, setData] = useState();
   const [searchQuery, setSearchQuery] = useState("");
@@ -27,9 +27,11 @@ const Coutries = (props) => {
   }
 
 const results = !searchQuery ? data : data.filter(d=>d.name.toLowerCase()===searchQuery.toLowerCase())
+
   return (
     <React.Fragment>
-      <div>
+    <Nav/>
+      <div className='title-wrapper'>
         <h1 className="allCountries-title">List of all countries</h1>
         <input
           type="text"
