@@ -39,8 +39,8 @@ const Coutries = (props) => {
           {data.map((country) => (
             // <li key={country.alpha2Code}>{country.name}</li>
             <Link key={country.alpha2Code} to={{
-              pathname: `all/${country.name}`,
-              state: {country}
+              pathname: `all/${country.alpha2Code}`,
+              state: {...{country}}
             }}>{country.name}</Link>
             // <Country data={country}/>
           ))}
