@@ -1,19 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { handleSearch } from './../services/SearchService';
 
 const Nav = (props) => {
-  const [searchQuery, setSearchQuery] = useState('')
-
-  const searchService=(query)=>{
-    console.log(query.target.value);
-    setSearchQuery(query.target.value)
-    handleSearch(query.target.value)
-  }
-   function search(){
-    const data =  handleSearch()
-    console.log('Im from search service',data);
-  }
   
   return (
     <React.Fragment>
@@ -49,12 +37,9 @@ const Nav = (props) => {
             type="text"
             name="search"
             id="search"
-            value={searchQuery}
-            onChange={searchService}
             placeholder="Search..."
             className="bg-gray-200 focus:bg-white border-transparent focus:border-blue-400"
           />
-          <button onClick={search}>Search</button>
         </ul>
       </nav>
     </React.Fragment>
