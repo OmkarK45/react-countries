@@ -235,6 +235,9 @@ nav > ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -260,9 +263,6 @@ nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -273,6 +273,7 @@ nav > ul {
   font-size: 1.7rem;
   display: block;
   font-weight: bold;
+  display: block;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -281,6 +282,7 @@ nav > ul {
   font-size: 1.3rem;
   color: #4e4b66;
   font-family: "Segoe UI", var(--thirdFont);
+  display: block;
 }
 
 .region, .currency {
@@ -291,7 +293,10 @@ nav > ul {
   font-family: 'Quicksand', sans-serif;
   margin-right: 0.5rem;
   margin-bottom: 1rem;
-  justify-self: flex-end;
+}
+
+.currency {
+  background-color: lightgreen;
 }
 
 .allCountries-title {
@@ -304,7 +309,21 @@ nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=App.css.map */
