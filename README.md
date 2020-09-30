@@ -11,7 +11,7 @@
 # Todos for the project
 [x] - Design in figma
 [x] - Fetch Data from API
-[] - Pass as prop to Country component
+[x] - Pass as prop to Country component
 [] - Home, Countries, Country Component
 [] - Navigation bar
 [] - Countries Page
