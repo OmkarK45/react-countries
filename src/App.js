@@ -10,7 +10,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Router>
-        <Nav/>
+        
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/all" exact component={Countries} />
