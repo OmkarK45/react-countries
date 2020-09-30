@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Card = ({ country }) => {
-  // console.log(data);
   return (
     <React.Fragment>
+     
       <div className="card">
         <div className="img-wrapper">
           <img src={country.flag} alt="" />
         </div>
         <div className="main">
-            
+
           <div className="wrapper">
             <Link
               className="name"
