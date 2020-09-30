@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 const Nav = (props) => {
   return (
     <React.Fragment>
-      <nav class="nav flex flex-wrap items-center justify-between px-4">
-        <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
-          <span class="font-semibold text-xl tracking-tight">
+      <nav className="nav flex flex-wrap items-center justify-between px-4">
+        <div className="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
+          <span className="font-semibold text-xl tracking-tight">
             <li className="logo">
               <Link to="/" className="p-5">
                 Country Database
               </Link>
             </li>
           </span>
-          <span class="font-semibold text-xl tracking-tight">
+          <span className="font-semibold text-xl tracking-tight">
             {" "}
             <li>
               <Link to="/all" className="p-5">
@@ -23,15 +23,15 @@ const Nav = (props) => {
           </span>
         </div>
 
-        <input class="menu-btn hidden" type="checkbox" id="menu-btn" />
+        <input className="menu-btn hidden" type="checkbox" id="menu-btn" />
         <label
-          class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none"
-          for="menu-btn"
+          className="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none"
+          htmlFor="menu-btn"
         >
-          <span class="navicon bg-grey-darkest flex items-center relative"></span>
+          <span className="navicon bg-grey-darkest flex items-center relative"></span>
         </label>
 
-        <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
+        <ul className="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
           <input
             type="text"
             name="search"

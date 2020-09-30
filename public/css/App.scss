@@ -13,9 +13,7 @@
   --thirdFont: "Poppins", sans-serif;
 }
 
-p {
-  margin-bottom: 1.15rem;
-}
+
 
 h1,
 h2,
@@ -199,8 +197,52 @@ nav > ul {
   letter-spacing: -3.25px;
   margin-bottom: 2rem;
 }
-.hero-image{
+.hero-image {
   width: 90%;
   display: block;
   margin-top: 2rem;
+}
+.list-wrapper {
+  display: flex;
+  // width: 90%;
+  // margin: 3rem auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border-radius: 10px;
+  max-width: 265px;
+  margin: 2rem 2rem;
+  -webkit-box-shadow: 0px 10px 137px -67px rgb(158, 158, 158);
+  -moz-box-shadow: 0px 10px 137px -67px rgba(199, 199, 199, 1);
+  box-shadow: 0px 10px 137px -67px rgb(143, 143, 143);
+  overflow: hidden;
+}
+.main{
+  padding: 1rem 1.8rem;
+}
+.name {
+  font-size: 1.7rem;
+  display: block;
+  // padding: 0 1.8rem;
+  // padding-top: 1.3rem;
+  // font-family: var(--thirdFont);
+}
+.capital {
+  // padding: 0 1.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  color: #4e4b66;
+  font-family: "Segoe UI",var(--thirdFont);
+}
+.region{
+  padding: 0.3rem 0.5rem;
+  background: #DED3FF;
+  border-radius: 39px;
+  font-weight: bold;
+}
+.allCountries-title{
+  margin: 2rem 3rem;
+  font-family: "Segoe UI";
+  font-weight: bold;
 }
