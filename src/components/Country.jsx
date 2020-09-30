@@ -1,17 +1,18 @@
 import React from "react";
-
 const Country = ({
   location: {
     state: { country },
   },
 }) => {
   // Access the country object properties here now
-  console.log(country);
+  console.log("Data available", country);
   return (
-    <div>
-      <h1> {country.name}</h1>
+    <React.Fragment>
       
-    </div>
+      <div>
+        <h1> {country.name}</h1>
+      </div>
+    </React.Fragment>
   );
 };
 
