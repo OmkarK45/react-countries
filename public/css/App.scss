@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,8 +9,50 @@
 :root {
   --mainFont: "Quicksand", sans-serif;
   font-family: var(--mainFont);
-  --secondFont:'Herr Von Muellerhoff', cursive;
+  --secondFont: "Herr Von Muellerhoff", cursive;
+  --thirdFont: "Poppins", sans-serif;
 }
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+
 li {
   list-style: none;
 }
@@ -26,14 +69,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   // background-color: orange;
-  border-bottom: 1px solid #ECEDEF;
+  border-bottom: 1px solid #ecedef;
   flex-wrap: wrap;
 }
 nav > ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 .logo {
   font-size: 1.9rem;
@@ -58,8 +100,8 @@ nav > ul {
   border-radius: 16px;
 }
 
-#search{
-  width:600px;
+#search {
+  width: 600px;
   border-radius: 16px;
   padding: 1rem 2rem;
 }
@@ -67,7 +109,7 @@ nav > ul {
 @media (max-width: 767px) {
   .navicon {
     width: 1.125em;
-    height: .125em;
+    height: 0.125em;
   }
 
   .navicon::before,
@@ -76,9 +118,9 @@ nav > ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: all .2s ease-out;
-    content: '';
-    background: #3D4852;
+    transition: all 0.2s ease-out;
+    content: "";
+    background: #3d4852;
   }
 
   .navicon::before {
@@ -116,27 +158,49 @@ nav > ul {
 }
 
 // Home page
-.home-wrapper{
+.home-wrapper {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   height: calc(100vh - 4.6rem);
   flex-wrap: wrap;
-  grid-template-areas: 'left right';
+  grid-template-areas: "left right";
 }
-.left{
+.left {
   grid-area: left;
-  background-color: lightblue;
+  // background-color: lightblue;
 }
-.right{
-  background-color: lightgreen;
+.right {
+  // background-color: lightgreen;
   grid-area: right;
 }
-@media (max-width:768px){
-  .home-wrapper{
+@media (max-width: 768px) {
+  .home-wrapper {
     grid-template-columns: 1fr;
 
-    grid-template-areas: 'left' 'right';
-
+    grid-template-areas: "left" "right";
   }
+}
+.text-holder {
+  margin-left: 5rem;
+  height: 100%;
+  padding-top: 9rem;
+  width: 100%;
+}
+.home-hero-upper {
+  font-family: var(--secondFont);
+  font-size: 7rem;
+  letter-spacing: 4.75px;
+}
+.home-hero-bottom {
+  font-family: var(--thirdFont);
+  font-weight: bold;
+  font-size: 82px;
+  letter-spacing: -3.25px;
+  margin-bottom: 2rem;
+}
+.hero-image{
+  width: 90%;
+  display: block;
+  margin-top: 2rem;
 }
