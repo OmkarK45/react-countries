@@ -1,9 +1,9 @@
 import React from "react";
 
-const Country = (props) => {
+const Country = ({location:{state:{country}}}) => {
   // Access the country object properties here now
-console.log(props);
-return <h1>{props.location.state.name} </h1>;
+console.log(country);
+return <h1> {country.name}</h1>;
 };
 
 export default Country;
