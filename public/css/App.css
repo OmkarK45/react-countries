@@ -9,10 +9,14 @@
 }
 
 :root {
-  --mainFont: "Segoe UI","Quicksand",sans-serif;
+  --mainFont: "Quicksand",sans-serif;
   font-family: var(--mainFont);
   --secondFont: "Herr Von Muellerhoff", cursive;
   --thirdFont: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
 }
 
 h1,
@@ -223,6 +227,22 @@ nav > ul {
   margin-bottom: 2rem;
 }
 
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hero-image {
   width: 90%;
   display: block;
@@ -301,8 +321,7 @@ nav > ul {
 
 .allCountries-title {
   margin: 2rem 3rem;
-  font-family: "Segoe UI";
-  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .tag-wrapper {
