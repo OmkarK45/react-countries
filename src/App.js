@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Country from "./components/Country";
 import Countries from "./components/allCountries";
-import Nav from './components/Nav'
-
+import Nav from "./components/Nav";
+import "./css/App.css";
 
 const App = () => {
   return (
     <React.Fragment>
       <Router>
-        
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/all" exact component={Countries} />

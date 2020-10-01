@@ -9,7 +9,7 @@
 }
 
 :root {
-  --mainFont: "Quicksand",sans-serif;
+  --mainFont: "Quicksand", sans-serif;
   font-family: var(--mainFont);
   --secondFont: "Herr Von Muellerhoff", cursive;
   --thirdFont: "Poppins", sans-serif;
@@ -294,7 +294,7 @@ nav > ul {
   display: block;
   font-weight: bold;
   display: block;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .capital {
@@ -305,12 +305,13 @@ nav > ul {
   display: block;
 }
 
-.region, .currency {
+.region,
+.currency {
   padding: 0.3rem 0.5rem;
-  background: #DED3FF;
+  background: #ded3ff;
   border-radius: 39px;
   font-weight: bold;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin-right: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -321,7 +322,7 @@ nav > ul {
 
 .allCountries-title {
   margin: 2rem 3rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .tag-wrapper {
@@ -344,5 +345,23 @@ nav > ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.country-info-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 70px;
+}
+
+.image {
+  padding: 2rem 6rem;
+}
+
+.image img {
+  border-radius: 15px;
+  overflow: hidden;
 }
 /*# sourceMappingURL=App.css.map */

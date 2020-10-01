@@ -1,5 +1,7 @@
 import React from "react";
 import Table from "./Table";
+import Nav from "./Nav";
+
 const Country = ({
   location: {
     state: { country },
@@ -9,9 +11,15 @@ const Country = ({
   console.log("Data available", country);
   return (
     <React.Fragment>
-      <div>
-        <h1> {country.name}</h1>
-        <Table data={country} />
+      <Nav />
+      <div className="country-info-wrapper">
+        <div className="image">
+          <img src={country.flag} alt=""/>
+        </div>
+        <div className="info">
+          <h1> {country.name}</h1>
+          <Table data={country} />
+        </div>
       </div>
     </React.Fragment>
   );
