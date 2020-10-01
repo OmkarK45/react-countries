@@ -371,3 +371,9 @@ nav > ul {
 .value {
   margin-left: 0.2rem;
 }
+@media(max-width:768px){
+  #search{
+    width: 90%;
+  }
+
+}
