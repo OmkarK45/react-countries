@@ -202,7 +202,25 @@ nav > ul {
   .home-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    width: 100%;
         grid-template-areas: "left" "right";
+  }
+  .home-wrapper .text-holder {
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .home-wrapper .text-holder h2 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .home-wrapper .text-holder .show {
+    display: block;
+    margin: 0 auto;
+  }
+  .right img {
+    display: block;
+    margin: 2rem auto;
   }
 }
 
@@ -363,5 +381,69 @@ nav > ul {
 .image img {
   border-radius: 15px;
   overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.info h1 {
+  text-align: left;
+  font-weight: bold;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.one ul > li,
+.two ul > li {
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .country-info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    gap: 30px;
+  }
+  .country-info-wrapper .image {
+    padding: 35px;
+  }
+  .info {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .info h1 {
+    text-align: center;
+  }
+  .info .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+.property {
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
+
+.value {
+  margin-left: 0.2rem;
 }
 /*# sourceMappingURL=App.css.map */
