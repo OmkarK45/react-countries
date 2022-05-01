@@ -7,6 +7,8 @@ const Coutries = (props) => {
 	const [data, setData] = useState()
 	const [searchQuery, setSearchQuery] = useState('')
 
+	const [fetchStatus, setFetchStatus] = useState('IDLE')
+
 	const handleSearch = (e) => {
 		console.log(e.target.value)
 		setSearchQuery(e.target.value)
@@ -17,10 +19,13 @@ const Coutries = (props) => {
 	}, [])
 
 	async function fetchData() {
+		setFetchStatus('LOADING')
 		const res = await fetch('https://restcountries.com/v3.1/all')
+
 		res
 			.json()
 			.then((res) => {
+				setFetchStatus('SUCCESS')
 				setData(res)
 			})
 			.catch((err) => toast('Some Error Occured'))
@@ -28,7 +33,9 @@ const Coutries = (props) => {
 
 	const results = !searchQuery
 		? data
-		: data.filter((d) => d.name.toLowerCase() === searchQuery.toLowerCase())
+		: data.filter(
+				(d) => d.name.common.toLowerCase() === searchQuery.toLowerCase()
+		  )
 
 	return (
 		<React.Fragment>
@@ -46,9 +53,11 @@ const Coutries = (props) => {
 				/>
 			</div>
 			<div className="list-wrapper">
+				{fetchStatus === 'LOADING' && <div className="loader">Loading</div>}
+
 				{results &&
 					results.map((country) => (
-						<Card key={country.alpha2Code} country={country} />
+						<Card key={country.ccn3} country={country} />
 					))}
 			</div>
 		</React.Fragment>
